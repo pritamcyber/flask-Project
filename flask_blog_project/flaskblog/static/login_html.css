@@ -1,0 +1,260 @@
+
+.plane-logo{
+    margin: 10px 20px;
+    margin-bottom: 50px;
+    font-size: 4rem;
+}
+
+.resumes{
+    margin-left: 0;
+    width: 50px;
+    height: 70px;
+    font-size: 70px;
+    color: #0a5879fd;
+}
+.heading-primary {
+    margin-bottom: 20px;
+    
+}
+.heading-primary--main {
+    display: block;
+    color: #3e2354;
+    padding-left: 5%;
+    /* top: ; */
+    font-weight: 400;
+    font-size: 70px;
+    text-transform: uppercase;
+    /* font */
+    letter-spacing: 25px;
+    animation-name: expand;
+    animation-duration: 2s;
+    /* animation-iteration-count: infinite; */
+    animation-duration: 1;
+    animation-timing-function: ease-in-out;
+    backface-visibility: hidden;
+  } 
+.heading-primary--sub {
+    margin-top: 5px;
+    margin-left: 10px;
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    transform: translateX(90);
+    text-transform: uppercase;
+    /* font */
+    letter-spacing: 20px;
+    animation-name: subexpand;
+    animation-duration: 2s;
+    /* animation-iteration-count: infinite; */
+    animation-duration: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+    
+@keyframes expand {
+    0% {
+      opacity: 0;
+      transform: translatex(-40px);
+    }
+    80% {
+      transform: translatex(20px);
+    }
+    100% {
+      transform: translate(0);
+      opacity: 1;
+    }
+  }
+  @keyframes subexpand {
+    0% {
+      opacity: 0;
+      transform: translatex(100px);
+    }
+    80% {
+      transform: translatex(-3px);
+    }
+    100% {
+      transform: translate(0);
+      opacity: 1;
+    }
+  }
+
+  
+
+.align_perpose{
+   
+    margin-top: 20px;
+  
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    min-width: 100vh;
+    /* background-color: blue; */
+
+
+
+}
+/* .align_perpose .login-info{
+    /* background-image: linear-gradient(rgb(253, 177, 177),transparent) url("../static/dream.jpg") ; */
+
+/* } */ 
+.login-info{
+    /* background: ; */
+    background-image: linear-gradient(rgba(202, 0, 0, 0.374),transparent) url("../static/dream.jpg") ;
+
+    background-size: cover;
+    background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    /* margin-left: 0px; */
+    /* flex-grow: 2; */
+    /* flex-shrink: 7; */
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0px;
+    /* background-color: aqua; */
+    width:600px ;
+    height: 600px;
+}
+.wrapper{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(rgba(221, 147, 246, 0.815),transparent);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 0;
+
+}
+
+.from-wrapper{
+    border-radius: 10px;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+
+
+
+}
+.input-group{
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px;
+}
+.input-group .labels{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: rgb(62, 60, 60);
+    transition: 0.5s;
+    pointer-events: none;
+
+}
+.input-group .inputs{
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: rgba(30, 46, 53, 0.915);
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+}
+
+.inputs:focus~label, .inputs:valid~label{
+    top:-5px;
+}
+
+.btn{
+    width: 100%;
+    /* height: ; */
+    position: relative;
+    
+}
+
+.link-signup{
+    font-size: 34px;
+    text-align: center;
+    margin: 15px 0;
+}
+.link-signup p{
+    color: rgb(67, 67, 67);
+    font-size:.9rem;
+}
+.link-signup p a{
+    color: rgb(49, 27, 27);
+    text-decoration: none;
+    font-weight: 400;
+
+}
+.link-signup p a:hover{
+
+    text-decoration: underline;
+
+}
+
+
+/* here are some image uplode css */
+
+.upload {
+    width: 100px;
+    position: relative;
+    margin: auto;
+}
+
+.upload img {
+    border-radius: 50%;
+    border: 6px solid #eaeaea;
+}
+
+.upload .round {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #00B4FF;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.upload .round input[type = "file"] {
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+}
+
+input[type="file" i] {
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    align-items: baseline;
+    color: inherit;
+    text-overflow: ellipsis;
+    text-align: start !important;
+    padding: initial;
+    border: initial;
+    white-space: pre;
+    overflow: hidden !important;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa-camera:before {
+    content: "\f030";
+}

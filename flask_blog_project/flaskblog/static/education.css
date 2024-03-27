@@ -1,0 +1,254 @@
+.main-container{
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+
+    margin: 0;
+
+}
+
+
+.education-form{
+    flex-grow: 2;
+    background-color: aqua;
+}
+.container-for-education{
+    margin-top: 20px;
+    /* width: 100%; */
+    height: 70vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.flex-grow{
+    padding-right: 200px;
+    padding-left: 100px;
+    background-color: rgb(248, 248, 248);
+    margin: 20px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    
+}
+.education-written{
+    padding-left: 20px;
+}
+.flex-grow .divs-of-education-form{
+    border-width:2px;
+    border-style: dashed;
+
+    border-color: rgba(164, 164, 162, 0.842);
+
+    border-radius: 10px;
+
+    width: 200px ;
+    background-color: rgb(255, 255, 255);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divs-of-education-form a{
+    font-size: 2rem;
+    width: 100%;
+    color: rgb(176, 176, 174);
+    text-decoration: none;
+
+}
+.to-just-write {
+    text-align: center;
+    display: flex;
+    
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.to-just-write .span-r{
+    text-align: center;
+}
+.to-just-write .span-c{
+    margin-left: 0%;
+}
+.to-just-write .span-i{
+    margin-left: 0%;
+}
+.bxadd{
+    display: block;
+}
+
+.flex-grow .education-content{
+    width: 200px ;
+    border-radius: 10px;
+    background-color: rgb(131, 131, 135);
+    height: 300px;
+}
+
+.edu-margin{
+    text-transform: capitalize;
+    padding-top: 5px;
+    padding-left: 7px;
+    padding-bottom: 3px;
+    color: aliceblue;
+    background-color: rgba(54, 55, 55, 0.571);
+    width: 100%;
+    border-top-right-radius: 10px ;
+    border-top-left-radius: 10px;
+    margin-bottom: 0;
+    
+}
+
+.holder-of-edu-info{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+ background-color: bisque;
+    width: 100%;
+    height: 91%;
+    
+
+
+}
+
+.user-info{
+    border-bottom-left-radius: 10px;
+    /* flex-basis: 30%; */
+    background-color:rgba(61, 78, 232, 0.781) ;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    
+
+}
+
+.user-name-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.user-img-round{
+    overflow: hidden;
+    border-radius: 143px 143px 143px 143px;
+    border: 2px rgba(100, 170, 240, 0.766) solid;
+    /* background-color: #fdfdfd; */
+    padding:  3px;
+}
+.image-round{
+
+    clip-path: circle(50% at 50% 50%);
+
+}
+
+
+.user-name-img p{
+    margin-bottom: 0;
+    
+    color: rgb(221, 226, 229);
+}
+
+
+.name{
+    font-size: 1.3rem;
+    line-height: 12px;
+
+    font-weight: 800;
+
+}
+.surname{
+    font-size: 1.3rem;
+
+}
+.user-post{
+    font-size: .9rem;
+    line-height: 8px;
+    padding-bottom: 10px;
+
+}
+.user-edu{
+    flex-basis: 70%;
+    width: 70%;
+
+}
+.user-contace{
+    margin-top: 10px;
+}
+.user-contace i{ color: rgb(23, 18, 168);}
+.user-contace p{
+    padding-left: 5px;
+    margin-bottom: 0;
+}
+.user-contace hr{
+    margin: 0;
+    border: 3px solid rgba(43, 34, 54, 0.767);
+}
+.contact-written{
+        font-weight: 900;
+        color: #f8f3f3;
+        font-size: 1rem;
+
+}
+.user-phone-no,.user-email{
+    font-size: small;
+}
+.user-phone-no span{
+    color: rgb(205, 204, 201);
+
+}
+.user-email span{
+    font-size: .6rem;
+    color: rgb(222, 221, 220);
+}
+
+
+.user-edu{
+    border-bottom-right-radius: 10px;
+    background-color: rgb(178, 247, 247);
+
+}
+.educat-written{
+    padding-left: 4px;
+    margin: 0;
+}
+.user-edu hr{
+    margin: 0;
+    margin-bottom: 5px;
+}
+.what-done{
+    padding-left: 4px;
+    font-size: .8rem;
+    font-weight: 500;
+    width: fit-content;
+    margin-bottom: 0;
+
+}
+.years{
+    padding-left: 4px;
+    font-size: .6rem;
+    margin-bottom: 9px;
+}
+.from-from{
+    margin-bottom: 0;
+    padding-left: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.from-where{
+    padding-left: 4px;
+    margin: 0;
+}
+.where{
+    padding-left: 4px;
+    margin-top: 0;
+    font-size: .9rem;
+    font-weight: 600;
+}

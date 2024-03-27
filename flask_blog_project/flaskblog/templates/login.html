@@ -1,0 +1,83 @@
+
+{% extends "./layout.html"%}
+{% block content %}
+
+
+
+<div class="align_perpose">
+    <div class="login-info">
+        <i class='bx bx-paper-plane plane-logo'>
+            
+        </i>
+        <h2 class="heading-primary"> <span class="heading-primary--main">Build Your Resume <span class="material-symbols-outlined resumes">
+            history_edu
+            </span></span><span class="heading-primary--sub">For Your Dream job</span></h2>
+
+
+        <h2></h2>
+
+
+        
+    </div>
+<div class="wrapper">
+    <div class="from-wraper">
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+        <fieldset class="from-group">
+            <legend class="border-bottom mb-4">Personal Information</legend>
+            
+            <div class="alfa input-group">
+                {% if form.email.errors %}
+                    {{ form.email(class="inputs is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.email(class=" inputs") }}
+                {% endif %}
+                {{ form.email.label(class=" labels") }}
+
+            </div>
+
+            <div class="alfa input-group">
+                {% if form.password.errors %} 
+                    {{ form.password(class="inputs is-invalid inputs") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.password(class=" inputs") }}
+                {% endif %}
+                {{ form.password.label(class=" labels") }}
+
+            </div>
+
+            <div class="alfa input-group remeber">
+                {{ form.remember(class="remeber-input") }}
+
+                {{ form.remember.label(class="form-control-label ") }}
+
+                
+
+            </div>
+
+            
+        </fieldset>
+
+        <div class="alfa input-group">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+
+        <div class="alfa input-group link-signup">
+            <p>Don't Have Any Account Click Here <a href="{{ url_for('register') }}"  class="sign-in-btn">Sign Un </a></p>
+        </div>
+        
+    </form>
+</div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,152 @@
+
+{% extends "./layout.html"%}
+{% block content %}
+
+<div class="align_perpose">
+<div class="wrapper">
+    <div class="from-wraper">
+    <form  method="POST",enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <fieldset class="from-group">
+            <legend class="border-bottom mb-4">Personal Information</legend>
+
+            <div class="upload">
+                <img src="../static/profile_pic/noprofil.jpg" width = 100 height = 100 alt="">
+                <div class="round">
+                    <input type="file" id="file" name="file"  accept="image/*" required/>
+                  <i class = "bx bxs-camera-plus" style = "color: #fff;"></i>
+                </div>
+              </div>
+            
+            <div class="alfa input-group">
+                
+
+                {% if form.username.errors %}
+                    {{ form.username(class="is-invalid inputs") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.username.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.username(class="inputs") }}
+                {% endif %}
+                {{ form.username.label(class="labels") }}
+            </div>
+
+            <div class="alfa input-group">
+                
+
+                {% if form.last_name.errors %}
+                    {{ form.last_name(class="is-invalid inputs") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.last_name.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.last_name(class="inputs") }}
+                {% endif %}
+                {{ form.last_name.label(class="labels") }}
+            </div>
+
+            <div class="alfa input-group">
+                
+
+                {% if form.email.errors %}
+                    {{ form.email(class="is-invalid inputs") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.email(class="inputs") }}
+                {% endif %}
+                {{ form.email.label(class="labels") }}
+            </div>
+ 
+            <div class="alfa input-group">
+                
+
+                {% if form.phone_no.errors %}
+                    {{ form.phone_no(class="is-invalid inputs") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.phone_no.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.phone_no(class="inputs") }}
+                {% endif %}
+                {{ form.phone_no.label(class="labels") }}
+            </div>
+
+            <div class="alfa input-group">
+                
+
+                {% if form.job.errors %}
+                    {{ form.job(class="is-invalid inputs") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.job.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.job(class="inputs") }}
+                {% endif %}
+                {{ form.job.label(class="labels") }}
+            </div>
+
+            
+
+            <div class="alfa input-group">
+                
+
+                {% if form.password.errors %}
+                    {{ form.password(class="is-invalid inputs") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.password(class="inputs") }}
+                {% endif %}
+                {{ form.password.label(class="labels") }}
+            </div>
+
+            <div class="alfa input-group">
+                
+
+                {% if form.confirm_password.errors %}
+                    {{ form.confirm_password(class="is-invalid inputs") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.confirm_password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.confirm_password(class="inputs") }}
+                {% endif %}
+                {{ form.confirm_password.label(class="labels") }}
+            </div>
+
+            
+        </fieldset>
+
+        <div class="alfa input-group">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+
+        <div class="alfa input-group link-signup">
+            <p>already have an account <a href="{{ url_for('login') }}"  class="sign-in-btn">Login </a></p>
+        </div>
+        
+        
+    </form>
+</div>
+</div>
+</div>
+{% endblock %}
+   

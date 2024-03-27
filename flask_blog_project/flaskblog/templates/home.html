@@ -1,0 +1,49 @@
+{% extends "./layout.html"%}
+{% block content %}
+
+<main class="main-content"> 
+        
+
+    <div class="main-content-div">
+        <div class="name-div">
+            <div class="text-div">
+            <h3 class="name-text"> <span> {{current_user.username}}</span> {{current_user.last_name}} </h3>
+        </div>
+        </div>
+        <div class="name-and-post-div">
+            <h1 class="name-black"> Hi I'm {{current_user.username}} <span class="pink">{{current_user.last_name}}</span></h1>
+            <h4 class="name-black-post">{{current_user.job}}</h4>
+            <p class="discription"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloremque iusto voluptatem, repellendus sed quaerat unde impedit vero libero illum minima rem corrupti quia, adipisci dolorum maiores numquam nobis ab.</p>
+
+            <div class="hire-download">
+                
+            <a href="#" class="hire">Hire me</a>
+            <a href="download" class="down"> download cv </a>
+
+        </div>
+        </div>
+
+
+        <div class="image-div">
+
+            <div class="social-link">
+                <div class="facebook-div">
+                    <a class='bx bxl-facebook-square' href="#"></a>
+                </div>
+                <div class="insta-div">
+                    <a class='bx bxl-instagram' ></a>
+                </div>
+                <div class="twt-div">
+                    <a class='bx bxl-twitter' ></a>
+                </div>
+
+            </div>
+            <div class="image-image">
+        <img src="{{url_for('static', filename='flask-boy2.jpg')}}" alt="" width=400 height=400 class="user-img">
+    </div>
+        </div>
+
+    </div>
+</main>
+
+{% endblock%}

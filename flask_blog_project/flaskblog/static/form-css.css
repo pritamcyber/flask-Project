@@ -1,0 +1,318 @@
+/*  */
+#modal{
+    z-index: 10;
+    padding: 10px;
+    position: fixed;
+   border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(255, 255, 255);
+    transform: translate(-50% ,-50%) scale(0);
+    width: 700px;
+    transition: 200ms ease-in-out;
+
+    max-width: 50%;
+    display: none;
+}
+#modal.active{
+    transform: translate(-50% ,-50%) scale(1);
+    display: block;
+    
+
+}
+.overlay{
+    z-index:5;
+    position: fixed;
+    opacity: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(84, 84, 84, 0.395);
+    pointer-events: none;
+    display: none;
+
+}
+.overlay.active{
+    opacity: 1;
+    display: block;
+
+    pointer-events: all;
+
+
+}
+.modal-header{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+
+
+
+}
+.real-del-and-submit{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+
+
+
+}
+.done-all:hover{
+    background-color: rgba(41, 56, 213, 0.896);
+}
+.done-all{
+    color: white;
+    background-color: rgba(22, 29, 99, 0.896);
+    display: inline-flex;
+}
+.done-span{
+    font-weight: 500;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    display: inline-block;
+}
+.done-all,.del-but {
+    border: 1px solid rgba(67, 67, 70, 0.715);
+    padding: 5px;
+    border-radius: 8px;
+    height: 36px;
+    transition: 100ms;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.close-button:hover,.done-all:hover,.del-but:hover{
+    border-color: rgb(65, 88, 243);
+
+}
+.close-button 
+{
+    border: 1px solid rgba(67, 67, 70, 0.715);
+    padding: 5px;
+    padding-bottom: 2px;
+    border-radius: 8px;
+    height: 36px;
+    transition: 100ms;
+    align-items: center;
+    text-align: center;
+}
+.modal-header .titel{
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgba(29, 31, 31, 0.848);
+
+
+}
+.modal-body{
+    display: flex;
+    border: 1px solid rgb(89, 88, 88);
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 20px;
+
+
+
+
+
+
+
+
+}
+
+.skill-field{
+    padding: 10px;
+}
+.skill-field label,.year-label{
+    color: rgba(29, 31, 31, 0.848);
+
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: block;
+}
+.skill-field input{
+    margin-bottom: 10px;
+    background-color: rgba(226, 223, 223, 0.592);
+    border-radius: 5px;
+    
+    outline: none;
+    width: 70%;
+    height: 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 1px solid rgba(123, 122, 122, 0.792);
+
+}
+.skill-field input:active{
+    border: 1px solid rgba(20, 23, 215, 0.816);
+
+    border-color: rgba(16, 36, 102, 0.908);
+
+}
+.skill-field input:focus {
+    border-color: rgba(58, 101, 242, 0.908);
+
+
+}
+
+.range-box{
+    background-color: rgb(248, 247, 247);    
+    display: flex;
+    padding: 20px 20px 20px 30px;
+    flex-direction: row;
+    align-items: center;
+
+
+
+
+}
+.range-slider label{
+    font-size: 1.rem;
+    font-weight: 400;
+    display: block;
+    margin-left: -20px;
+    margin-right: 50px;
+
+    
+
+
+
+}
+.range-slider input{
+    background-color: rgb(236, 224, 212);
+    margin-right: 2px;
+    height: 10px;
+    width: 100%;
+    outline: none;
+    background-color: rgba(206, 202, 202, 0.971);
+    border-radius: 25px;
+    box-shadow: inset 0px 0px 4px rgba(211, 208, 244, 0.637);
+}
+
+
+.range-slider input::-webkit-slider-thumb{
+    height: 30px;appearance: none;
+
+    width: 30px;
+    border-radius: 100%;
+    border: 7px solid rgb(141, 13, 135);
+
+    -webkit-appearance:none;
+    background-color: rgb(73, 85, 251);
+}
+
+
+.range-slider {
+    height: 40px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.range-value{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 20px;
+    
+}
+
+/* Education */
+
+.address-ins{
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+#ins-input{
+
+    width: 100%;
+}
+.ins{
+    box-sizing: content-box;
+flex-basis: 80%;
+
+    padding: 0;
+    flex-grow: 3;
+    padding-left: 10px;
+    padding-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.city{
+    box-sizing: content-box;
+
+padding: 0;
+flex-basis: 60%;
+    flex-grow: 2;
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
+.years_of_education{
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+
+}
+.start-year{
+    padding: 15px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+.end-year{
+    margin-right: 2px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+.selections-years{
+    color: rgba(76, 75, 75, 0.749);
+
+    box-shadow: 0 0 1em 0 rgba(205, 204, 204, 0.9);
+    border-radius: 5px;
+    border: 1px solid rgb(119, 116, 116);
+    padding: 8px;
+}
+.selections-years:hover,#dis-input:hover{
+    border-color: rgba(58, 101, 242, 0.908);
+
+}
+.selections-years:active,#dis-input:active{
+    border-color: rgba(58, 101, 242, 0.908);
+
+}
+
+.first-op{
+    color: rgba(76, 75, 75, 0.749);
+}
+
+#dis-input{
+    height: 100px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(161, 159, 159, 0.814);
+}
+.selections-years:focus,#dis-input:focus{
+    border-color: rgba(58, 101, 242, 0.908);
+
+}
+.trigered-but{
+    border: none;
+    color: rgba(71, 70, 69, 0.656);
+    transition: 100ms ease-in-out;
+    font-size:2.0rem;
+}
+
+.trigered-but:hover{
+    text-shadow: 3px 2px 18px rgba(199, 214, 246, 0.732);
+    color: rgba(71, 70, 69, 0.556);
+}

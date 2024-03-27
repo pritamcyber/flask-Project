@@ -1,0 +1,221 @@
+
+{% extends "./layout.html"%}
+{% block content %}
+
+
+<link rel="stylesheet" href="../static/education.css">
+<link rel="stylesheet" href="../static/form-css.css">
+
+
+<div class="overlay"></div>
+<div class="container-for-education">
+    
+    <form action="" method="POST"> 
+    
+        
+    <div class="modal-alfa" id="modal">
+        <div class="modal-header">
+            <div class="titel">SKILL</div>
+            <button data-close-button class="close-button"><span class="material-symbols-outlined">
+                close
+                </span></button>
+        </div>
+        <div class="modal-body">
+            
+            <div class="skill-field">
+            <label for="skill-written">Skill</label>
+            <input type="text" id="skill-written" name="sk" required >
+            </div>      
+            <div class="range-box">
+    
+                <div class="range-slider">
+                
+                    <label for="skill-level">level</label>
+                    <input type="range" name="le" min="0" max="5" value="0" >
+                </div>
+            <div class="range-value"><span>Make a choice</span></div>
+    
+        </div>
+       
+        
+
+        <div class="del-and-submit">
+            <div class="real-del-and-submit">
+                <button class="del-but"><span class="material-symbols-outlined">
+                    delete
+                    </span></button>
+                <button  class="done-all"><span class="material-symbols-outlined">
+                    done
+                    </span> <span class="done-span">Done</span></button>
+            </div>
+        </div>
+        </div>
+    
+    
+    </div>
+    </form>
+    <h1 class="education-written">  Skill
+    </h1>
+    <hr>
+    <div class="flex-grow">
+    
+
+    <div class="divs-of-education-form">
+        <div class="to-create-education">
+            <div class="to-just-write">
+                <button data-modal-target="#modal"  class = 'trigered-but'><span class="span-c">Add New </span>  <span class="span-r">Skill </span><span ><i class='bx bxs-book-add span-i'></i></span></button>
+            </div>
+        </div>
+    </div>
+
+
+    {% for context in current_user.Skill%}
+
+
+    <div class="education-content">
+        <h6 class="edu-margin">
+            Resume {{current_user.Skill[0].skill_of}}
+
+        </h6>
+
+        <div class="holder-of-edu-info">
+            <div class="user-info">
+
+                <div class="user-name-img">
+                    <div class="user-img-round"><img src="../static/profile_pic/person.png" alt="" class="image-round" width=50, height=50></div>
+                    <p class="name">{{current_user.username}}</p>
+                    <p class="surname">{{current_user.last_name}}</p>
+                    <p class="user-post"> {{current_user.job}} </p>
+                </div>
+                <div class="user-contace">
+                    <p class="contact-written">Contact</p>
+                    <hr>
+                    <i class='bx bxs-phone user-phone-no' ><span>{{current_user.phone_no}}</span></i>
+                    <i class='bx bxl-gmail user-email' ><span>{{current_user.email}}</span></i>
+                </div>
+            </div>
+            <div class="user-edu">
+                    <div class="educat">
+                        <p class="educat-written">Skill</p>
+                        <hr>
+                        <p class="what-done">{{context.skill_of}}</p>
+
+                        {% if context.level ==  0 or  context.level  == 1   %}
+                            <p class="years"> Begginer</p>
+                        {% elif context.level ==  2%}
+                            <p class="years"> Moderate</p>
+                        {% elif context.level ==  3%}
+                            <p class="years"> Good</p>
+                        {% elif context.level ==  4%}
+                            <p class="years"> Very good</p>
+                        {% elif context.level ==  5%}
+                            <p class="years"> Excellent</p>
+                        {% endif%}
+
+
+                        <p class="from-from"></p>
+                        
+                        <span>{{current_user.id}}</span>
+                    </div>
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+    
+
+   <script>
+        
+        
+        const inp =         document.querySelector('.range-slider input')
+        const a = document.querySelector('.range-value span')
+        console.log(inp)
+        console.log(a)
+        inp.oninput = ()=> {
+
+            console.log(inp.value)
+
+            switch(Number(inp.value)) {
+                case 1:
+                    console.log(inp.value)
+
+                    a.innerText = 'Begginer'
+                  break;
+                case 2:
+                console.log(inp.value)
+                    a.innerText = 'Moderate'
+                  break;
+                case 3:
+                console.log(inp.value)
+                    a.innerText = 'Good'
+                    break;
+                case 4:
+                console.log(inp.value)
+                a.innerText = 'Very Good'
+                    break;
+                case 5:
+                console.log(inp.value)
+                    a.innerText = 'Excellent'
+                    break;
+                
+                default:
+                  // code block
+              }
+        }
+
+        const mod = document.querySelector('.trigered-but')
+        const mod1 = document.querySelector('.close-button')
+        const overlay  = document.querySelector('.overlay')
+        const modal = document.querySelector('#modal')
+
+        overlay.addEventListener('click',() =>{
+            closeModal(modal)
+        })
+        console.log(mod)
+
+       
+            mod.addEventListener('click',() =>{
+                
+                openModal(modal)
+            })
+        
+       
+            mod1.addEventListener('click',() =>{
+                
+               closeModal(modal)
+            })
+            
+
+
+        
+        
+        
+        
+       
+
+
+        function openModal(modal){
+            modal.classList.add('active')
+
+            overlay.classList.add('active')
+           
+
+
+        }
+
+        function closeModal(modal){
+            
+            modal.classList.remove('active')
+            overlay.classList.remove('active')
+
+        }
+        
+   </script>
+
+
+   
+</div>
+</div>
+
+
+
+{% endblock%}
